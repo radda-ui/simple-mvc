@@ -1,8 +1,8 @@
 {
     "name": "salemframework/simple-application",
-    "description": "Simple mvc applications",
+    "description": "Simple mvc application",
     "type": "project",
-    "license": "Free",
+    "license": "None",
     "keywords": ["framework","mvc"],
     "autoload": {
         "psr-4": {
@@ -11,6 +11,6 @@
     },
     "require":{},
     "scripts": {
-        "serve": "php -S salem.sr:8080 public"
+        "serve": "php -S localhost:8080 public"
     }
 }
