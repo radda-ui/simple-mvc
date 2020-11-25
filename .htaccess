@@ -1,0 +1,21 @@
+AddDefaultCharset UTF-8
+
+ErrorDocument 404  http://radda-ui.cf/
+ErrorDocument 401  http://radda-ui.cf/
+ErrorDocument 403  http://radda-ui.cf/
+ErrorDocument 400  http://radda-ui.cf/
+ErrorDocument 500  http://radda-ui.cf/
+
+php_flag display_errors on
+php_value error_reporting 1
+RewriteEngine On
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-l
+    RewriteBase /
+    RewriteRule $ public/ [L]
+    RewriteRule ^(.*) index.php/$1 [QSA,L]
+</IfModule>
