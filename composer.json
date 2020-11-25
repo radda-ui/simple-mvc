@@ -6,11 +6,11 @@
     "keywords": ["framework","mvc"],
     "autoload": {
         "psr-4": {
-            "mvc\\": "/application"
+            "mvc\\": "application/"
         }
     },
     "require":{},
     "scripts": {
-        "serve": "php -S 0.0.0.0:8080 -t public"
+        "serve": "php -S salem.sr:8080 public"
     }
 }

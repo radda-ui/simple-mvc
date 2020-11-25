@@ -19,7 +19,7 @@ class Application {
             $this->request,
             $this->response
         );
-        $this->database = new Database();
+        $this->database = new Database($conf["db"]);
     }
 
 

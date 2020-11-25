@@ -9,6 +9,6 @@ class Controller{
         $this->view = new View();
     }
     public function index($param){
-        $this->view->show(static::__FILE__,$param);
+        $this->view->show(static::class,$param);
     }
 }

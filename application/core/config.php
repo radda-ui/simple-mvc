@@ -1,8 +1,9 @@
 <?php 
 namespace mvc\core;
 
-final class Config
-{
+if(!defined("ROOT")) define('ROOT', dirname(dirname(dirname(__FILE__))));
+
+final class Config{
     private array $data;
     function __construct(){}
 
@@ -13,7 +14,7 @@ final class Config
         return ($this->data !== []) ? $this->data[$section] : self::getData()[$section] ;
     }
     private static function getData(){
-        $this->data=parse_ini_file('../config/config.ini');
+        $this->data=parse_ini_file(ROOT.'/config/config.ini');
         return $this->data;
     }
 }
